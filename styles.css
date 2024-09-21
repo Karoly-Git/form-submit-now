@@ -169,4 +169,22 @@ footer a:hover {
         width: 100%;
         max-width: unset;
     }
+
+    #form-block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    #fsn-container {
+        margin: 0 auto;
+    }
+
+    #form-block .block-wrapper {
+        margin-top: 1rem;
+    }
+
+    #form-block .code-block {
+        margin: 0;
+    }
 }
