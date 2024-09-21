@@ -1,16 +1,11 @@
-// Automatically detect if running locally
-const isServerLocal =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1";
-
 let jsScript = document.createElement('script');
 jsScript.defer = true;
-jsScript.src = isServerLocal ? "http://localhost:8000/fsn.js" : "https://form-submit-now-e2191786113f.herokuapp.com/fsn.js";
+jsScript.src = "https://form-submit-now-e2191786113f.herokuapp.com/fsn.js";
 document.head.appendChild(jsScript);
 
 let styleLink = document.createElement('link');
 styleLink.rel = "stylesheet";
-styleLink.href = isServerLocal ? "http://localhost:8000/fsn.css" : "https://form-submit-now-e2191786113f.herokuapp.com/fsn.css";
+styleLink.href = "https://form-submit-now-e2191786113f.herokuapp.com/fsn.css";
 document.head.appendChild(styleLink);
 
 function copyToClipboard(codeId, button) {
