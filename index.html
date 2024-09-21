@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Form Submit Now (FSN) offers a lightweight solution for handling form submissions on your website. Easily integrate the tool to manage form submissions directly to your email." />
+    <meta name="author" content="Karoly Hornyak" />
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>FSN Integration Guide</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Form Integration Guide</h1>
+    </header>
+
+    <div class="container">
+        <p>
+            This guide outlines the steps to integrate the <code class="inline-code">#fsn-container</code> into any HTML
+            document for efficient form submission management.
+        </p>
+
+        <h2>1. Include the Required JavaScript File</h2>
+        <p>
+            Add the following JavaScript file inside the <code class="inline-code">&lt;head&gt;</code> section of your
+            HTML document:
+        </p>
+
+        <div class="block-wrapper">
+            <button class="copy-btn" onclick="copyToClipboard('#code1', this)">Copy code</button>
+            <div class="code-block">
+                <code id="code1">
+&lt;<span class="code-tag">script</span> <span class="code-attr-name">defer</span> <span class="code-attr-name">src</span>=<span class="code-attr-value">"https://form-submit-now-e2191786113f.herokuapp.com/fsn.js"</span>&gt;&lt;<span class="code-tag">/script</span>&gt;
+                </code>
+            </div>
+        </div>
+
+        <h2>2. Optional: Include the CSS File</h2>
+        <p>
+            If you prefer to design the form yourself, you can skip this step. Otherwise, include the following CSS file
+            inside the <code class="inline-code">&lt;head&gt;</code> section to apply default styling:
+        </p>
+
+        <div class="block-wrapper">
+            <button class="copy-btn" onclick="copyToClipboard('#code2', this)">Copy code</button>
+            <div class="code-block">
+                <code id="code2">
+&lt;<span class="code-tag">link</span> <span class="code-attr-name">rel</span>=<span class="code-attr-value">"stylesheet"</span> <span class="code-attr-name">href</span>=<span class="code-attr-value">"https://form-submit-now-e2191786113f.herokuapp.com/fsn.css"</span>/&gt;
+                </code>
+            </div>
+        </div>
+
+        <h2>3. Add the Contact Form to Your HTML</h2>
+        <p>
+            Customize the attributes and insert the following <code class="inline-code">&lt;div&gt;</code> element into
+            your HTML wherever you want the contact form to appear. Once you’ve followed the steps, the form should be
+            fully integrated.
+        </p>
+
+        <div id="form-block">
+            <div id="fsn-container" data-name="" data-to="" data-subject="" data-cc="" data-bcc="">
+            </div>
+
+            <div class="block-wrapper">
+                <button class="copy-btn" onclick="copyToClipboard('#code3', this)">Copy code</button>
+                <div class="code-block">
+                    <code id="code3">
+&lt;<span class="code-tag">div</span> 
+    <span class="code-attr-name">id</span>=<span class="code-attr-value">"fsn-container"</span>
+    <span class="code-attr-name">data-name</span>=<span class="code-attr-value">    "<input id="try-name" class="try-input" type="text">"</span>
+    <span class="code-attr-name">data-to</span>=<span class="code-attr-value">      "<input id="try-to" class="try-input" type="text">"</span>
+    <span class="code-attr-name">data-subject</span>=<span class="code-attr-value"> "<input id="try-subject" class="try-input" type="text">"</span>
+    <span class="code-attr-name">data-cc</span>=<span class="code-attr-value">      "<input id="try-cc" class="try-input" type="text">"</span>
+    <span class="code-attr-name">data-bcc</span>=<span class="code-attr-value">     "<input id="try-bcc" class="try-input" type="text">"</span>
+&gt;&lt;<span class="code-tag">/div</span>&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <h2>How to Customize the Data Attributes</h2>
+
+        <ul>
+            <li>
+                <p>
+                    <code class="inline-code">data-name:</code> Specifies the sender's name in the email. If left blank,
+                    the name will default to <strong>"Form Submit Now"</strong>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code class="inline-code">data-to:</code> Specifies the recipient email addresses where form
+                    submissions are sent. Must have at least 1 recipient email address. Multiple recipients should be
+                    separated by a <code class="inline-code">;</code>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code class="inline-code">data-subject:</code> Sets the subject line for the email. If left blank,
+                    the subject will default to <strong>"Messsage from your website"</strong>.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code class="inline-code">data-cc</code> and <code class="inline-code">data-bcc:</code> Optional
+                    fields for CC and BCC recipients. Multiple recipients should be separated by a <code
+                        class="inline-code">;</code>.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>
+            © <span class="year">YYYY</span> <a target="_blank" href="https://karolyhornyak.co.uk">Karoly Hornyak</a> .
+            All Rights
+            Reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
