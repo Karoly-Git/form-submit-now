@@ -1,11 +1,11 @@
 let jsScript = document.createElement('script');
 jsScript.defer = true;
-jsScript.src = "https://form-submit-now-e2191786113f.herokuapp.com/fsn.js";
+jsScript.src = "https://form-submit-now-25a2560fdfa1.herokuapp.com/fsn.js";
 document.head.appendChild(jsScript);
 
 let styleLink = document.createElement('link');
 styleLink.rel = "stylesheet";
-styleLink.href = "https://form-submit-now-e2191786113f.herokuapp.com/fsn.css";
+styleLink.href = "https://form-submit-now-25a2560fdfa1.herokuapp.com/fsn.css";
 document.head.appendChild(styleLink);
 
 function copyToClipboard(codeId, button) {
